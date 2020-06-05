@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import { AuthProvider } from "./utils/auth";
-
+import Member from "./pages/Member"
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -14,7 +14,7 @@ function App() {
       <Router>
         <Switch>
           <ProtectedRoute exact path="/" onFailureRedirectToPath="/login">
-            <Home />
+            <Member />
           </ProtectedRoute>
           <Route exact path="/login">
             <Login />
